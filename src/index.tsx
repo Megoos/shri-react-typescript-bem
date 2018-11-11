@@ -1,9 +1,14 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './components/App/App';
+import MobileDetect from 'mobile-detect';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {App as AppDesktop} from './components/App/App@desktop';
+import {App as AppMobile} from './components/App/App@mobile';
+
 import './index.scss';
 
+const md = new MobileDetect(window.navigator.userAgent);
+
 ReactDOM.render(
-  <App />,
+  md.mobile() ? <AppMobile /> : <AppDesktop />,
   document.getElementById('root') as HTMLElement,
 );
