@@ -1,0 +1,33 @@
+@import '../../index.scss';
+
+.App {
+  background: $white;
+  width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0;
+  text-align: left;
+  color: $main;
+}
+
+.Content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  padding: 50px;
+  padding-bottom: 25px;
+  flex: 1;
+}
+
+.Content-Title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $main;
+  grid-column: span 6;
+  padding-bottom: 10px;
+
+  @include tablets {
+    padding-bottom: 0;
+  }
+}

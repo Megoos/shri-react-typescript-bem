@@ -1,0 +1,17 @@
+@import '../../../index.scss';
+
+.CardMeta {
+  display: flex;
+  flex-shrink: 0;
+  font-size: 1rem;
+  text-align: left;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  p {
+      margin-top: 25px;
+
+      @include tablets {
+          margin-top: 20px;
+      }
+  }
+}

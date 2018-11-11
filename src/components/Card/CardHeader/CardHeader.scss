@@ -1,0 +1,54 @@
+@import '../../../index.scss';
+
+.CardHeader {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.CardHeader-Title {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 0 20px;
+  line-height: 28px;
+
+  @include tablets {
+      font-size: 14px;
+      height: 35px;
+      line-height: 16px;
+      margin: 0 0 0 15px;
+  }
+}
+
+.CardHeader-IconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+
+  @include tablets {
+      height: 35px;
+      width: 35px;
+  }
+}
+
+.CardHeader-Icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  fill: $main;
+
+  &_critical {
+      fill: white;
+  }
+}
+  
