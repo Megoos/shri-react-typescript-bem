@@ -1,6 +1,6 @@
 import { cn } from '@bem-react/classname';
 import React from 'react';
-import Sprite from './assets/sprite.svg';
+import Icon from '../../Icon';
 import './CardHeader.scss';
 
 const cnCardHeader = cn('CardHeader');
@@ -15,9 +15,7 @@ function CardHeader({ icon, text, type }: IHeaderProps) {
   return (
     <header className={cnCardHeader()}>
       <div className={cnCardHeader('IconContainer')}>
-        <svg className={cnCardHeader('Icon', { critical: type === 'critical' })}>
-          <use xlinkHref={Sprite + `#${icon}`} />
-        </svg>
+        <Icon icon={icon} theme={type}></Icon>
       </div>
 
       <h3 className={cnCardHeader('Title')}>{text}</h3>

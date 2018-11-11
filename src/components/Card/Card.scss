@@ -50,7 +50,7 @@
 
   &:hover,
   &:active {
-      .Card-MainPart:not(.Card-MainPart_critical) {
+      .Card-MainPart:not(.Card-MainPart_theme_critical) {
           background: $itemActiveColor;
       }
 
@@ -75,7 +75,7 @@
   flex: auto;
   transition: background-color .2s ease;
 
-  &_critical {
+  &_theme_critical {
       background-color: $red;
       color: white;
   }

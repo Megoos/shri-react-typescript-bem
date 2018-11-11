@@ -7,10 +7,9 @@ const cnCardMeta = cn('CardMeta');
 interface IHeaderProps {
   date: string;
   source: string | null;
-  type: string;
 }
 
-function CardMeta({ date, source, type }: IHeaderProps) {
+function CardMeta({ date, source }: IHeaderProps) {
   return (
     <div className={cnCardMeta()}>
       <p className={cnCardMeta('Source')}>{source}</p>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import appData from '../../data/events.json';
-import Card from '../Card/Card';
+import {Card} from '../Card';
 import Footer from '../Footer';
 import Header from '../Header';
 
@@ -16,7 +16,7 @@ class App extends Component {
           <h1 className="Content-Title">Лента событий</h1>
           {
             appData.events.map((cardData, index) => (
-                <Card key={index} eventData={cardData} />
+                <Card key={index} eventData={cardData} theme={cardData.type}/>
             ))
           }
         </main>

@@ -1,0 +1,15 @@
+@import '../../index.scss';
+
+.Icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  fill: $main;
+
+  &_theme_critical {
+      fill: white;
+  }
+}
